@@ -66,16 +66,6 @@ public class VolcanoAnalyzer {
         return volcanoTypes.get(frequency.indexOf(highestFrequency))
         ;}
 
-    // public String mostCommonType() {
-    //     List<String> types = volcanos.stream().map(item -> item.getType()).distinct().collect(Collectors.toList());
-    //     List<Integer> nums = new ArrayList<>();
-    //     types.forEach(item -> {
-    //         nums.add(volcanos.stream().filter(i -> i.getType().equals(item)).collect(Collectors.toList()).size());
-    //     });
-    //     Integer max = Collections.max(nums);
-    //     return types.get(nums.indexOf(max));
-    // }
-
 
 
 }
