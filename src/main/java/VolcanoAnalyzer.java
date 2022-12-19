@@ -3,6 +3,8 @@ import java.net.URISyntaxException;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
@@ -52,11 +54,27 @@ public class VolcanoAnalyzer {
     }
     public double causedTsunami(){
         return volcanos.stream().filter(s -> !s.getTsu().equals("")).toList().size() *100 / volcanos.size();
-        //return (volcanos.size()); // 804
-        // return volcanos.stream().filter(s -> !s.getTsu().equals("")).toList().size(); // 137
-        // volcanos.size()
-        // volcanos.stream().filter(s -> s.getTsu() !== "")
     }
+
+    public String mostCommonType(){
+        List<String> volcanoTypes =  volcanos.stream().map(type -> type.getType()).distinct().collect(Collectors.toList());
+        List<Integer> frequency = new ArrayList<>();
+        volcanoTypes.forEach(obj -> {
+            frequency.add(volcanos.stream().filter(item -> item.getType().equals(obj)).collect(Collectors.toList()).size());
+        });
+        Integer highestFrequency = Collections.max(frequency);
+        return volcanoTypes.get(frequency.indexOf(highestFrequency))
+        ;}
+
+    // public String mostCommonType() {
+    //     List<String> types = volcanos.stream().map(item -> item.getType()).distinct().collect(Collectors.toList());
+    //     List<Integer> nums = new ArrayList<>();
+    //     types.forEach(item -> {
+    //         nums.add(volcanos.stream().filter(i -> i.getType().equals(item)).collect(Collectors.toList()).size());
+    //     });
+    //     Integer max = Collections.max(nums);
+    //     return types.get(nums.indexOf(max));
+    // }
 
 
 
