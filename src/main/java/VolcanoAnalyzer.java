@@ -66,6 +66,10 @@ public class VolcanoAnalyzer {
         return volcanoTypes.get(frequency.indexOf(highestFrequency))
         ;}
 
+    public int eruptionsByCountry(String country){
+        return volcanos.stream().filter(i -> i.getCountry().equals(country)).collect(Collectors.toList()).size();
+    }
+
 
 
 }
