@@ -75,8 +75,12 @@ public class VolcanoAnalyzer {
         double totalNoOfElevations = volcanos.size();
         double sumOfElevations = volcanos.stream().mapToDouble(i -> i.getElevation()).sum();
         return sumOfElevations /totalNoOfElevations;
-
     }
+    
+    public List<String> volcanoTypes(){
+        return volcanos.stream().map(types -> types.getType()).distinct().collect(Collectors.toList());
+    }
+
 
 
 }
