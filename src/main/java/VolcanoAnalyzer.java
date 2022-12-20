@@ -95,4 +95,11 @@ public class VolcanoAnalyzer {
         return volcanos.stream().filter(item -> item.getYear() >1800 && !item.getTsu().equals("tsu") && item.getLatitude() <0 && item.getVEI() == 5).map(item -> item.getName()).collect(Collectors.toList());
     }
 
+    // Return the names of eruptions that occurred at or above an elevation passed in as an argument.
+
+    // public List<String> elevatedVolcanoes(int Elevation){
+    //     return volcanos.stream().filter(null)
+
+    // }
+
 }

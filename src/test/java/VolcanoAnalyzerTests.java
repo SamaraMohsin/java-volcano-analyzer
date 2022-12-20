@@ -221,20 +221,22 @@ public class VolcanoAnalyzerTests {
         //Teardown
     }
 
-    // @Test
-    // public void elevatedVolcanoes() {
-    //     //Setup
-    //     String[] expected = { "Tungurahua", "Cotopaxi", "Bona-Churchill", "Bona-Churchill", "Ruiz", "Tungurahua", "Cotopaxi", "Cotopaxi", "Cotopaxi", "Cotopaxi", "Sabancaya", "Ararat", "Ruiz", "Cotopaxi", "Tungurahua", "Tungurahua", "Popocatepetl", "Sangay", "Ruiz", "Sabancaya", "Huila", "Popocatepetl", "Tungurahua", "Tungurahua", "Tungurahua", "Huila", "Tungurahua", "Huila", "Tungurahua", "Tungurahua", "Tungurahua", "Ubinas" };
+    // 1. Return the names of eruptions that occurred at or above an elevation passed in as an argument.
 
-    //     //Execute
-    //     String[] actual = va.elevatedVolcanoes(4990);
+    @Test
+    public void elevatedVolcanoes() {
+        //Setup
+        String[] expected = { "Tungurahua", "Cotopaxi", "Bona-Churchill", "Bona-Churchill", "Ruiz", "Tungurahua", "Cotopaxi", "Cotopaxi", "Cotopaxi", "Cotopaxi", "Sabancaya", "Ararat", "Ruiz", "Cotopaxi", "Tungurahua", "Tungurahua", "Popocatepetl", "Sangay", "Ruiz", "Sabancaya", "Huila", "Popocatepetl", "Tungurahua", "Tungurahua", "Tungurahua", "Huila", "Tungurahua", "Huila", "Tungurahua", "Tungurahua", "Tungurahua", "Ubinas" };
 
-    //     //Assert
-    //     assertEquals( expected.length, actual.length, "should have 32 volcanoes above 4990");
-    //     assertArrayEquals(expected, actual, "should have the correct volcanoes");
+        //Execute
+        String[] actual = va.elevatedVolcanoes(4990);
 
-    //     //Teardown
-    // }
+        //Assert
+        assertEquals( expected.length, actual.length, "should have 32 volcanoes above 4990");
+        assertArrayEquals(expected, actual, "should have the correct volcanoes");
+
+        //Teardown
+    }
 
     // @Test
     // public void topAgentsOfDeath() {
