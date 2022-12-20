@@ -189,19 +189,21 @@ public class VolcanoAnalyzerTests {
         //Teardown
     }
 
-    // @Test
-    // public void percentNorth() {
-    //     //Setup
-    //     double expected = 64.55;
+    //  percentage of eruptions that occurred in the Northern Hemisphere.
 
-    //     //Execute
-    //     double actual = va.percentNorth();
+    @Test
+    public void percentNorth() {
+        //Setup
+        double expected = 64.55;
 
-    //     //Assert
-    //     assertEquals( expected, actual, .1, "should be about 64.55 percent");
+        //Execute
+        double actual = va.percentNorth();
 
-    //     //Teardown
-    // }
+        //Assert
+        assertEquals( expected, actual, .1, "should be about 64.55 percent");
+
+        //Teardown
+    }
 
     // @Test
     // public void manyFilters() {

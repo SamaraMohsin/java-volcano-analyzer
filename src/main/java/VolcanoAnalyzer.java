@@ -81,6 +81,16 @@ public class VolcanoAnalyzer {
         return volcanos.stream().map(types -> types.getType()).distinct().collect(Collectors.toList());
     }
 
+    public double percentNorth() {
+        double NorthernHemispherCountries= volcanos.stream().filter(n -> n.getLatitude() > 0).count();
+        int totalNoOfCountries = volcanos.size();
+
+    //     double totalNoOfCountries = volcanos.stream().map(country -> country.getLatitude()).count();
+    //     // return NorthernHemispherCountries *100 /totalNoOfCountries;
+        return NorthernHemispherCountries *100 / totalNoOfCountries; // 804
+        // return NorthernHemispherCountries;
+    }
+
 
 
 }
