@@ -205,19 +205,19 @@ public class VolcanoAnalyzerTests {
         //Teardown
     }
 
-    // @Test
-    // public void manyFilters() {
-    //     //Setup
-    //     String[] expected = { "Galunggung", "Hudson, Cerro" };
-    //     //Execute
-    //     String[] actual = va.manyFilters();
+    @Test
+    public void manyFilters() {
+        //Setup
+        String[] expected = { "Galunggung", "Hudson, Cerro" };
+        //Execute
+        String[] actual = va.manyFilters().toArray(new String[0]);
 
-    //     //Assert
-    //     assertEquals( expected.length, actual.length, "should have 3 volcanoes");
-    //     assertArrayEquals(expected, actual, "should have the correct volcanoes");
+        //Assert
+        assertEquals( expected.length, actual.length, "should have 3 volcanoes");
+        assertArrayEquals(expected, actual, "should have the correct volcanoes");
 
-    //     //Teardown
-    // }
+        //Teardown
+    }
 
     // @Test
     // public void elevatedVolcanoes() {

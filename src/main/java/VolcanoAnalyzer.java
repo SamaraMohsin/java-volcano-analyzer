@@ -91,6 +91,8 @@ public class VolcanoAnalyzer {
         // return NorthernHemispherCountries;
     }
 
-
+    public List<String> manyFilters(){
+        return volcanos.stream().filter(item -> item.getYear() >1800 && !item.getTsu().equals("tsu") && item.getLatitude() <0 && item.getVEI() == 5).map(item -> item.getName()).collect(Collectors.toList());
+    }
 
 }
