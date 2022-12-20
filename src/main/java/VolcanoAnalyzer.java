@@ -70,6 +70,13 @@ public class VolcanoAnalyzer {
         return volcanos.stream().filter(i -> i.getCountry().equals(country)).collect(Collectors.toList()).size();
     }
 
+    public double averageElevation(){
+        // return
+        double totalNoOfElevations = volcanos.size();
+        double sumOfElevations = volcanos.stream().mapToDouble(i -> i.getElevation()).sum();
+        return sumOfElevations /totalNoOfElevations;
+
+    }
 
 
 }
